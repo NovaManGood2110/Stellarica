@@ -27,6 +27,10 @@ dependencies {
 
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${property("kotlin_coroutines_version")}")
 	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${property("kx_ser_version")}")
+	implementation("org.jetbrains.kotlin:kotlin-scripting-common")
+	implementation("org.jetbrains.kotlin:kotlin-scripting-jvm")
+	implementation("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
+	implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies")
 }
 
 val version = property("mod_version")!!

@@ -259,7 +259,6 @@ open class Craft(
 			MultiblockHandler[targetWorld.getChunkAt(new.origin).bukkitChunk].add(new)
 		}
 
-
 		// finish up
 		movePassengers(modifier, rotation)
 		world = targetWorld
