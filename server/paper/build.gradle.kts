@@ -27,6 +27,11 @@ dependencies {
 
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${property("kotlin_coroutines_version")}")
 	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${property("kx_ser_version")}")
+
+	// Seems to be the only modern-ish (farmboy0) luaj fork that I could find
+	// plus, figura is a minecraft mod, so that's... something
+	implementation("com.github.Moonlight-MC.LuaJ:luaj-core:${property("luaj_version")}figura")
+	implementation("com.github.Moonlight-MC.LuaJ:luaj-jse:${property("luaj_version")}-figura")
 }
 
 val version = property("mod_version")!!
