@@ -78,7 +78,7 @@ object Lua {
 				throw Error("Script overran resource limits.")
 			}
 		}
-		val instructionCount = 20
+		val instructionCount = 200000
 
 		sethook.invoke(
 			LuaValue.varargsOf(

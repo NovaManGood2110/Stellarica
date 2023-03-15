@@ -9,6 +9,7 @@ import net.stellarica.server.crafts.Craft
 import net.stellarica.server.crafts.starships.control.ShipControlHotbar
 import net.stellarica.server.crafts.starships.subsystems.Subsystem
 import net.stellarica.server.crafts.starships.subsystems.armor.ArmorSubsystem
+import net.stellarica.server.crafts.starships.subsystems.computer.ComputerSubsystem
 import net.stellarica.server.crafts.starships.subsystems.shields.ShieldSubsystem
 import net.stellarica.server.crafts.starships.subsystems.weapons.WeaponSubsystem
 import net.stellarica.server.utils.extensions.toBlockPos
@@ -26,11 +27,12 @@ class Starship(origin: BlockPos, direction: Direction, world: ServerLevel, owner
 	Craft(origin, direction, world, owner), Listener {
 
 	val subsystems: Set<Subsystem>
-		get() = setOf(weapons, shields, armor)
+		get() = setOf(weapons, shields, armor, computers)
 
 
 	val weapons = WeaponSubsystem(this)
 	val shields = ShieldSubsystem(this)
+	val computers = ComputerSubsystem(this)
 	val armor = ArmorSubsystem(this)
 
 
